@@ -87,6 +87,6 @@ python evaluate_results.py  \
 
 ## Prompts
 
-The prompts used in the GMC-VQA framework are available in the `./prompts` directory. These prompts are designed to guide the Question Generator and Inferencer modules in generating region-specific questions and synthesizing reasoning for final answers.
+The prompts used in our framework are available under `./prompts`. These prompts are designed to guide the Question Generator and Inferencer modules as well as the perfomrance evaluator.
 
-To view images of these prompts, please refer to `PROMPTS.md` file.
+Please refer to [PROMPTS.md](PROMPTS.md) To view images of the prompts.
