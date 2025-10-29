@@ -1,12 +1,19 @@
 # Grounded Multi-modal Conversation for Zero-shot Visual Question Answering
 
-## Contents
+### Overview
 
-- [Installation](#installation)
-- [Dataset](#dataset)
-- [Run](#run)
-- [Evaluation](#evaluation)
-- [Prompts](#prompts)
+GMC-VQA is a region-grounded, conversation-based framework for zero-shot visual question answering. It combines a vision-language model (VLM) with a large language model (LLM) and uses grounding to focus on image regions relevant to a question. The system iteratively gathers region-specific visual evidence and synthesizes it to produce accurate answers, improving over end-to-end VLMs and prior LLM–VLM conversational methods.
+
+![GMC-VQA Framework](assets/diagram.png)
+
+<sub><em>Figure: GMC-VQA pipeline. The grounding module (Locator) identifies regions of interest based on the question. An iterative LLM–VLM conversation is conducted per region to collect targeted visual evidence, which the LLM (Inferencer) integrates to produce the final answer.</em></sub>
+
+### Highlights
+
+- Region-grounded multi-modal conversation between an LLM and a VLM
+- Per-region iterative querying to collect targeted visual evidence
+- Measurable gains across VQAv2, OK-VQA, and ST-VQA
+
 
 ## Installation
 
@@ -87,6 +94,18 @@ python evaluate_results.py  \
 
 ## Prompts
 
-The prompts used in our framework are available under `./prompts`. These prompts are designed to guide the Question Generator and Inferencer modules as well as the perfomrance evaluator.
+The prompts used in our framework are available under `./prompts`. These prompts are designed to guide the Question Generator and Inferencer modules as well as the performance evaluator.
 
-Please refer to [PROMPTS.md](PROMPTS.md) To view images of the prompts.
+Please refer to [PROMPTS.md](PROMPTS.md) to view images of the prompts.
+
+## Citation
+
+If you find this repository helpful, please cite the GMC-VQA paper (IEEE SMC 2025):
+
+```bibtex
+@inproceedings{gmc_vqa_2025,
+  title     = {Grounded Multi-modal Conversation for Zero-shot Visual Question Answering},
+  booktitle = {Proceedings of IEEE SMC},
+  year      = {2025}
+}
+```
